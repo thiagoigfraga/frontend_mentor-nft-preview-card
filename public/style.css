@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: hsl(217, 54%, 11%);
+    position: relative;
+}
+
+.content {
+    max-width: 100%;
+    height: 95vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: hsl(216, 50%, 16%);
+    max-width: 100%;
+    height: 596px;
+    padding: 27px;
+    border-radius: 8px;
+}
+
+.equilibrium-img {
+    position: relative;
+}
+
+.equilibrium-img img {
+    max-width: 100%;
+    height: 300px;
+    border-radius: 8px;
+}
+
+.equilibrium-img::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 8px;
+    width: 300px;
+    height: 300px;
+    background: hsl(178, 100%, 50%);
+    background-image: url('assets/images/icon-view.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    opacity: 0;
+    transition: 0.5s ease;
+}
+
+.equilibrium-img:hover::before {
+    opacity: 0.9;
+    filter: saturation(1);
+    cursor: pointer;
+}
+
+.container .title {
+    margin: 25px 0;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 400;
+    transition: color 0.5s;
+}
+
+.container .title:hover {
+    color: hsl(178, 100%, 50%);
+}
+
+.container p {
+    color: hsl(215, 51%, 70%);
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.info-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.info-container .ethereum-info {
+    display: flex;
+    gap: 8px;
+    color: hsl(178, 100%, 50%);
+}
+
+.info-container .daysleft-info {
+    justify-content: flex-end;
+    display: flex;
+    gap: 8px;
+    color: hsl(215, 51%, 70%);
+}
+
+.avatar-container {
+    margin-top: 20px;
+    border-top: 1px solid hsl(0, 0%, 100%);
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.avatar-container img {
+    width: 30px;
+    border: 1px solid hsl(0, 0%, 100%);
+    border-radius: 50%;
+}
+
+.avatar-container .avatar-info {
+    color: hsl(215, 51%, 70%);
+    font-weight: 400;
+}
+
+.avatar-container .avatar-info strong {
+    color: #fff;
+    font-weight: 400;
+    transition: color 0.5s;
+}
+
+.avatar-container .avatar-info strong:hover {
+    color: hsl(178, 100%, 50%);
+}
+
+.attribution {
+    font-size: 14px;
+    text-align: center;
+    color: hsl(0, 0%, 100%);
+    letter-spacing: 0.8px;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+    text-decoration: none;
+}
+
+@media (max-width: 720px) {
+    .content {
+        max-width: 100%;
+        margin: 0 10px;
+    }
+}
